@@ -1,0 +1,31 @@
+{
+    "name": "aslong/user-account",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "C.Jason",
+            "email": "chenjxlg@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "laravel/framework": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "AsLong\\UserAccount": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AsLong\\UserAccount\\ServiceProvider"
+            ],
+            "aliases": {
+                "Account": "AsLong\\UserAccount\\Facades\\Account",
+                "AccountRule": "AsLong\\UserAccount\\Facades\\AccountRule"
+            }
+        }
+    }
+}
