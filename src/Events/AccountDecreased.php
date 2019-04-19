@@ -16,7 +16,7 @@ class AccountDecreased
     public function __construct($account, $log)
     {
         $this->account = $account;
-        $user->log     = $log;
+        $this->log     = $log;
     }
 
 }

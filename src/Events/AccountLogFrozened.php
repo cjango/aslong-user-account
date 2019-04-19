@@ -13,7 +13,7 @@ class AccountLogFrozened
 
     public function __construct($log)
     {
-        $user->log = $log;
+        $this->log = $log;
     }
 
 }
