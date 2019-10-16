@@ -13,6 +13,16 @@ class UserAccountLog extends Model
     ];
 
     /**
+     * 模型的「启动」方法
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+    }
+
+    /**
      * 关联用户
      * @Author:<C.Jason>
      * @Date:2019-09-06T14:11:41+0800
@@ -43,5 +53,17 @@ class UserAccountLog extends Model
     public function rule()
     {
         return $this->belongsTo(UserAccountRule::class)->withDefault();
+    }
+
+    /**
+     * Notes: 账户类型
+     * @Author: <C.Jason>
+     * @Date: 2019/10/11 11:35 上午
+     * @return string
+     */
+    protected function getTypeTextAttribute()
+    {
+        $types = config('user_account.account_type');
+        return $types[$this->type] ?: '未定义账户';
     }
 }
