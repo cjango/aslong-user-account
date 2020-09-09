@@ -13,8 +13,8 @@
         "laravel/framework": "*"
     },
     "autoload": {
-        "psr-0": {
-            "AsLong\\UserAccount": "src/"
+        "psr-4": {
+            "AsLong\\UserAccount\\": "src/"
         }
     },
     "extra": {
